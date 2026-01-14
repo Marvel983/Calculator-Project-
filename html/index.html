@@ -3,7 +3,227 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <link rel="icon" type="image/svg+xml" href="../media/calculator.svg" />
+
         <title>Calculadora</title>
     </head>
-    <body> </body>
+    <body class="bg-white text-[#ABB2BF] min-h-screen font-mono">
+        <main class="max-w-6xl mx-auto px-4">
+            <!-- Calculator content will go here -->
+            <section
+                class="flex justify-center items-center min-h-screen py-20 gap-12"
+            >
+                <!-- Calculator display -->
+                <div
+                    class="md:w-3/5 border border-1 border-[#C778DD] rounded-md bg-[#282C33]"
+                >
+                    <h1
+                        class="text-center text-2xl font-bold text-[#C778DD] py-4"
+                        >Calculadora</h1
+                    >
+                    <!-- Display area -->
+                    <div class="px-8 py-4">
+                        <div class="bg-white/10 rounded-md p-4">
+                            <div
+                                class="text-right text-xl font-bold text-[#ABB2BF] select-none"
+                            >
+                                0
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calculator buttons -->
+
+                    <div class="px-4 py-2">
+                        <div class="grid grid-cols-4 gap-2 p-4">
+                            <!-- Row 1 -->
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                ><svg
+                                    class="mx-auto"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M3 12h2l4 8 7-16h5" /></svg
+                            ></button>
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                ><svg
+                                    class="mx-auto"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M6 10l6 6M12 10l-6 6" />
+                                    <path d="M15 4l3 3-3 3" /></svg
+                            ></button>
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                ><svg
+                                    class="mx-auto"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M9 18V6H17" />
+                                    <path d="M15 18V6" />
+                                    <path d="M6 6h12" /></svg
+                            ></button>
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >F(x)</button
+                            >
+
+                            <!-- Row 2 -->
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >log</button
+                            >
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >ln</button
+                            >
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >(</button
+                            >
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >)</button
+                            >
+
+                            <!-- Row 3 -->
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                            >
+                                <svg
+                                    class="mx-auto"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    width="24"
+                                    height="24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M14 3c-2 0-3 1-3 3v12c0 2-1 3-3 3"
+                                    /></svg
+                            ></button>
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >sen</button
+                            >
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >cos</button
+                            >
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >tan</button
+                            >
+                        </div>
+                    </div>
+                    <!-- Aritmetic area -->
+                    <div class="px-4 py-2">
+                        <div class="grid grid-cols-4 gap-2 p-4">
+                            <!-- Row 1 -->
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >7</button
+                            >
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >8</button
+                            >
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >9</button
+                            >
+                            <button
+                                class="bg-[#C778DD] text-white py-2 rounded-md"
+                                >/</button
+                            >
+
+                            <!-- Row 2 -->
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >4</button
+                            >
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >5</button
+                            >
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >6</button
+                            >
+                            <button
+                                class="bg-[#C778DD] text-white py-2 rounded-md"
+                                >*</button
+                            >
+
+                            <!-- Row 3 -->
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >1</button
+                            >
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >2</button
+                            >
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >3</button
+                            >
+                            <button
+                                class="bg-[#C778DD] text-white py-2 rounded-md"
+                                >-</button
+                            >
+
+                            <!-- Row 4 -->
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md col-span-2"
+                                >0</button
+                            >
+                            <button
+                                class="bg-[#3E4451] text-[#ABB2BF] py-2 rounded-md"
+                                >.</button
+                            >
+                            <button
+                                class="bg-[#C778DD] text-white py-2 rounded-md"
+                                >+</button
+                            >
+
+                            <!-- Row 5 -->
+                            <button
+                                class="bg-[#E06C75] text-white py-2 rounded-md col-span-4"
+                                >=</button
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
